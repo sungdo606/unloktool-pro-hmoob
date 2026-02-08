@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Support Device - UnlokTool</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+/* fallback nếu css chính chưa có */
+.search-box {
+  max-width: 500px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.search-box button {
+  margin-top: 12px;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 8px;
+  background: #00ffcc;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#result {
+  margin-top: 25px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+</style>
+</head>
+
+<body>
+
+<header class="topbar">
+  <div class="logo">UNLOK<span>TOOL</span>© Hmoob</span></div>
+  <a class="logout" href="dashboard.html">Back</a>
+</header>
+
+<main class="dash">
+  <h2>Support Device</h2>
+  <p>Nhập tên máy để kiểm tra hỗ trợ</p>
+
+  <div class="search-box">
+    <input
+      type="text"
+      id="search"
+      placeholder="Ví dụ: Redmi Note 12, Samsung A14..."
+    >
+    <button onclick="findDevice()">Search</button>
+
+    <div id="result"></div>
+  </div>
+</main>
+
+<footer>
+  © 2026 TOOL-FRP-PRO-HMOOB
+</footer>
+
+<script>
+/* ===================================================
+   DANH SÁCH THIẾT BỊ SUPPORT
+   👉 Sau này update CHỈ CẦN THÊM TÊN MÁY VÀO ĐÂY
+=================================================== */
+
+const SUPPORT_DEVICES = [
+  {
+    name: "Redmi Note 12",
+    cpu: "Qualcomm",
+    frp: true,
+    flash: true
+  },
+  {
+    name: "Samsung A14",
+    cpu: "MTK",
+    frp: true,
+    flash: false
+  },
+  {
+    name: "OPPO A16",
+    cpu: "MTK",
+    frp: true,
+    flash: true
+  },
+  {
+    name: "Vivo Y20",
+    cpu: "Qualcomm",
+    frp: false,
+    flash: true
+  }
+];
+
+/* ===================================================
+   HÀM TÌM THIẾT BỊ
+=================================================== */
+
+function findDevice() {
+  const key = document.getElementById("search").value.trim().toLowerCase();
+  const result = document.getElementById("result");
+
+  if (key === "") {
+    result.style.color = "orange";
+    result.innerHTML = "❌ Vui lòng nhập tên máy";
+    return;
+  }
+
+  const device = SUPPORT_DEVICES.find(d =>
+    d.name.toLowerCase().includes(key)
+  );
+
+  if (!device) {
+    result.style.color = "red";
+    result.innerHTML = `
+      ❌ Thiết bị <b>${key}</b> chưa được hỗ trợ
+      <br>Vui lòng chờ update phiên bản mới
+    `;
+    return;
+  }
+
+  result.style.color = "#00ffcc";
+  result.innerHTML = `
+    ✅ <b>${device.name}</b><br>
+    CPU: <b>${device.cpu}</b><br>
+    FRP: ${device.frp ? "✔ Hỗ trợ" : "❌ Không hỗ trợ"}<br>
+    Flash: ${device.flash ? "✔ Hỗ trợ" : "❌ Không hỗ trợ"}
+  `;
+}
+</script>
+
+</body>
+</html>

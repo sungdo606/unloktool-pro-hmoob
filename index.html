@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>UnlokTool Pro</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">UNLOK<span>TOOL</span> © Hmoob</span></div>
+  <nav>
+    <div>
+    <a href="login.html" class="btn">Đăng nhập</a>
+    <a href="register.html" class="btn">Đăng ký</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>DỜ Mobile Service Tool</h1>
+  <p>𝘼𝘿𝘽 • 𝙁𝙖𝙨𝙩𝙗𝙤𝙤𝙩 • 𝙈𝙏𝙆 • 𝙌𝙪𝙖𝙡𝙘𝙤𝙢𝙢 • 𝙁𝙍𝙋 𝙎𝙚𝙧𝙫𝙞𝙘𝙚</p>
+  <button class="btn">Download</button>
+  
+</section calss="card">
+ 
+        <p> 🌐𝙎𝙀𝙍𝙑𝙀𝙍: 🔹 𝙤𝙣𝙡𝙞𝙣𝙚 <p>
+<section class="features">
+  <div class="card">⚡ Fast & Stable</div>
+  <div class="card">🔐 License Protection</div>
+  <div class="card">💻 Works with Tool PC</div>
+</section>
+
+<footer>
+  © 2026 TOOL-FRP-PRO-HMOOB
+</footer>
+
+</body>
+<!-- ===== EXTRA SECTION (SCROLL DOWN) ===== -->
+<section class="extra-section">
+
+  <!-- SLIDER / TAB IMAGE -->
+  <div class="slider-box">
+    <img id="slideImg" src="img/slide1.png" class="slide-img">
+  </div>
+
+  <!-- UPDATE TOOL VERSION -->
+  <div class="update-box">
+    <h3>🔄 Tool Update</h3>
+    <p>Current Version: <b>v1.0.0</b></p>
+    <p>Latest Version: <span class="new">v1.1.2</span></p>
+    <a href="login.html" class="btn" id="toolUpdate">Download update</a>
+  </div>
+
+  <!-- UPDATE SUPPORTED MODELS -->
+  <div class="model-update-box">
+    <h3>📱 Supported Devices Update</h3>
+    <ul>
+      <li>✔ Samsung A05 / A14 / A24</li>
+      <li>✔ Xiaomi Redmi 12 / Note 12</li>
+      <li>✔ Oppo A16 / A38</li>
+      <li>✔ Vivo Y20 / Y22</li>
+    </ul>
+  </div>
+
+</section>
+<script>
+  // Tìm nút Download phía trên
+  const downloadBtn = document.querySelector("button");
+
+  if (downloadBtn) {
+    downloadBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      const target = document.getElementById("toolUpdate");
+      if (target) {
+        target.scrollIntoView({
+          behavior: "smooth",
+          block: "center"
+        });
+      }
+    });
+  }
+</script>
+
+<script src="js/tudong.js"></script>
+</html>

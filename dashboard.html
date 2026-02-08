@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Dashboard - TOOL-FRP-PRO-HMOOB</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<!-- QUAN TRỌNG: tách dashboard -->
+<body class="dashboard-page">
+
+<header>
+  <div class="logo">UNLOK<span>TOOL</span>© Hmoob</span></div>
+  <a href="index.html" class="btn">Logout</a>
+</header>
+
+<main class="dash">
+  <h2>Welcome <span>Admin</span></h2>
+
+  <div class="grid">
+
+    <!-- LICENSE -->
+    <div class="card">
+  <h3>License Status</h3>
+
+  <p>User: <b id="licenseUser"></b></p>
+  <p>Plan: <b id="licensePlan"></b></p>
+
+  <p id="licenseStatus" class="status"></p>
+  <p id="licenseDays"></p>
+</div>
+
+    <!-- DOWNLOAD TOOL -->
+    <div class="card">
+  <h3>Download Tool</h3>
+  <p>Tải phiên bản mới nhất</p>
+  <a href="loadtool.html">
+    <button>Download</button>
+  </a>
+</div>
+
+    <!-- DOWNLOAD DRIVER -->
+    <div class="card">
+      <h3>Download Driver</h3>
+      <p>ADB • MTK • Qualcomm</p>
+      <a href="downloaddrv.html" class="btn">Download</a>
+    </div>
+
+    <!-- BUY LICENSE -->
+<div class="card highlight">
+  <h3>Buy / Renew License</h3>
+  <p>Mua hoặc gia hạn bản quyền
+     cho thuê tool
+  </p>
+  <a href="ativ.html" class="btn">Buy Now</a>
+</div>
+
+    <!-- ACCOUNT -->
+    <div class="card account-card">
+  <h3>Account Info</h3>
+
+  <p>User: <b id="accUser"></b></p>
+  <p>Computer: <b id="accPC"></b></p>
+  <p>OS / Browser: <b id="accOS"></b></p>
+
+  <p>Login Time: <b id="accLoginTime"></b></p>
+  <p>Expire Date: <b id="accExpire"></b></p>
+
+  <p id="accRemain"></p>
+</div>
+
+    <!-- SUPPORT -->
+    <div class="card">
+      <h3>Support</h3>
+      <p>Hướng dẫn & hỗ trợ kỹ thuật</p>
+      <a href="support.html" class="btn">Opne</a>
+    </div>
+  <script src="js/abtivesv.js"></script>
+  </div>
+</main>
+
+<footer>
+  © 2026 TOOL-FRP-PRO-HMOOB
+</footer>
+
+</body>
+</html>

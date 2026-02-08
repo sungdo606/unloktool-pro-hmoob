@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Seller / Payment - UnlokTool</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="dashboard-page">
+
+<header>
+  <div class="logo">UNLOK<span>TOOL</span></div>
+  <a href="ativ.html" class="btn">← Back</a>
+</header>
+
+<main class="dash">
+  <h2>Seller / Payment</h2>
+  <p style="color:#aaa">Liên hệ người bán để kích hoạt bản quyền</p>
+
+  <div class="grid">
+
+    <!-- INFO -->
+    <div class="card highlight">
+      <h3>Selected Package</h3>
+      <p id="package">---</p>
+    </div>
+
+    <!-- SELLER -->
+    <div class="card">
+      <h3>Seller Info</h3>
+      <p>Zalo: <b>0964270634 - 0981706609</b></p>
+      <p>Telegram: <b>@doshophmoobtool</b></p>
+      <p>Email: <b>sungdo606@gmail.com</b></p>
+    </div>
+
+    <!-- PAYMENT -->
+    <div class="card glow">
+      <h3>Payment</h3>
+      <p>Chuyển khoản / Momo</p>
+      <p><b>STK:</b> 0964270634</p>
+      <p><b>Ngân hàng:</b> MB BANK</p>
+      <p><b>Nội dung:</b> USERNAME + GÓI</p>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  © 2026 TOOL-FRP-PRO-HMOOB | All Rights Reserved
+</footer>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const plan = params.get("plan");
+
+  const map = {
+    "3_month": "License 3 Months - 300.000đ",
+    "6_month": "License 6 Months - 550.000đ",
+    "12_month": "License 12 Months - 1.000.000đ",
+    "hard_support": "Hard Device Support +200.000đ"
+  };
+
+  document.getElementById("package").innerText =
+    map[plan] || "Unknown package";
+</script>
+
+</body>
+</html>
